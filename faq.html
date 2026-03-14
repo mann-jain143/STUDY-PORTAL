@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | StudyPortal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2 class="logo">StudyPortal</h2>
+
+<ul>
+
+<li onclick="window.location.href='dashboard.html'">
+<i class='bx bx-book'></i> Courses
+</li>
+
+<li>
+<i class='bx bx-library'></i> My Courses
+</li>
+
+<li>
+<i class='bx bx-user'></i> Profile
+</li>
+
+<li class="active">
+<i class='bx bx-help-circle'></i> FAQ
+</li>
+
+<li onclick="window.location.href='complaint.html'">
+<i class='bx bx-message-error'></i> Complaint
+</li>
+
+<li id="logoutBtn">
+<i class='bx bx-log-out'></i> Logout
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+<div class="top-bar">
+<h1>AI Help Center</h1>
+</div>
+
+
+<div class="section">
+
+<label><b>Select a common question</b></label>
+
+<select id="faqDropdown" onchange="fillQuestion()">
+
+<option value="">Select a question</option>
+
+<option value="How do I enroll in a course?">
+How do I enroll in a course?
+</option>
+
+<option value="Why is my video not playing?">
+Why is my video not playing?
+</option>
+
+<option value="How do I download course notes?">
+How do I download course notes?
+</option>
+
+<option value="How do I reset my password?">
+How do I reset my password?
+</option>
+
+</select>
+
+<br><br>
+
+<label><b>Ask your question</b></label>
+
+<textarea id="userQuestion" rows="5"
+placeholder="Type your question here..."></textarea>
+
+<br><br>
+
+<button onclick="askAI()" class="submit-btn">
+Ask AI
+</button>
+
+<br><br>
+
+<div id="aiAnswer" class="ai-answer"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/faq.js"></script>
+
+</body>
+</html>

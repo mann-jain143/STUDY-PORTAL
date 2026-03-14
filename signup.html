@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | Study Portal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="auth-body">
+
+<div class="auth-wrapper">
+
+<div class="auth-box">
+
+<div class="auth-left">
+<h1>Study Portal</h1>
+<p>Create your account and start learning.</p>
+</div>
+
+<div class="auth-right">
+
+<h2>Register</h2>
+
+<form id="signupForm">
+
+<div class="input-group">
+<input type="text" id="signupName" required>
+<label>Full Name</label>
+</div>
+
+<div class="input-group">
+<input type="text" id="signupRoll" required>
+<label>Roll Number</label>
+</div>
+
+<div class="input-group">
+<input type="email" id="signupEmail" required>
+<label>Email</label>
+</div>
+
+<div class="input-group">
+<input type="password" id="signupPassword" required>
+<label>Password</label>
+</div>
+
+<button type="submit" class="btn">Register</button>
+
+</form>
+
+<p class="switch">
+Already have an account?
+<a href="login.html">Login</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

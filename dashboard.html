@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | Study Portal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2 class="logo">StudyPortal</h2>
+
+<ul>
+
+<li onclick="showCourses()">
+<i class='bx bx-book'></i> Courses
+</li>
+
+<li onclick="showMyCourses()">
+<i class='bx bx-library'></i> My Courses
+</li>
+
+<li onclick="showProfile()">
+<i class='bx bx-user'></i> Profile
+</li>
+
+<li onclick="window.location.href='faq.html'">
+<i class='bx bx-help-circle'></i> FAQ
+</li>
+
+<li onclick="window.location.href='complaint.html'">
+<i class='bx bx-message-error'></i> Complaint
+</li>
+
+<li id="logoutBtn">
+<i class='bx bx-log-out'></i> Logout
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+<div class="top-bar">
+
+<h1 id="welcomeUser">Welcome</h1>
+
+</div>
+
+
+<!-- Courses Section -->
+
+<div id="coursesSection" class="section">
+
+<h2>All Courses</h2>
+
+<div class="course-grid">
+
+<div class="course-card">
+<h3>Java</h3>
+<p>Master Java programming</p>
+<button onclick="enrollCourse('Java')">Enroll</button>
+</div>
+
+<div class="course-card">
+<h3>Python</h3>
+<p>Learn Python from scratch</p>
+<button onclick="enrollCourse('Python')">Enroll</button>
+</div>
+
+<div class="course-card">
+<h3>JavaScript</h3>
+<p>Frontend & backend JS</p>
+<button onclick="enrollCourse('JavaScript')">Enroll</button>
+</div>
+
+<div class="course-card">
+<h3>C Programming</h3>
+<p>Core programming concepts</p>
+<button onclick="enrollCourse('C Programming')">Enroll</button>
+</div>
+
+<div class="course-card">
+<h3>C++</h3>
+<p>Object oriented programming</p>
+<button onclick="enrollCourse('C++')">Enroll</button>
+</div>
+
+<div class="course-card">
+<h3>SQL</h3>
+<p>Database management</p>
+<button onclick="enrollCourse('SQL')">Enroll</button>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- My Courses -->
+
+<div id="myCoursesSection" class="section hidden">
+
+<h2>My Courses</h2>
+
+<div id="myCoursesGrid" class="course-grid"></div>
+
+</div>
+
+
+<!-- Profile -->
+
+<div id="profileSection" class="section hidden">
+
+<h2>Profile</h2>
+
+<p><b>Name:</b> <span id="profileName"></span></p>
+<p><b>Email:</b> <span id="profileEmail"></span></p>
+<p><b>Roll No:</b> <span id="profileRoll"></span></p>
+
+</div>
+
+
+<!-- FAQ -->
+
+<div id="faqSection" class="section hidden">
+
+<h2>FAQ</h2>
+
+<p><b>How do I enroll in a course?</b></p>
+<p>Click the enroll button on any course card.</p>
+
+<p><b>Can I access courses anytime?</b></p>
+<p>Yes, once enrolled you can access them anytime.</p>
+
+</div>
+
+<!-- Complaint -->
+
+<div id="complaintSection" class="section hidden">
+
+<h2>Submit Complaint</h2>
+
+<textarea id="complaintText" placeholder="Write your complaint here..." rows="5"></textarea>
+
+<br><br>
+
+<button onclick="submitComplaint()">Submit</button>
+
+<p id="complaintMsg"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

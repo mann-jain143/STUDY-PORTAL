@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Complaint | StudyPortal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2 class="logo">StudyPortal</h2>
+
+<ul>
+
+<li onclick="window.location.href='dashboard.html'">
+<i class='bx bx-book'></i> Courses
+</li>
+
+<li>
+<i class='bx bx-library'></i> My Courses
+</li>
+
+<li>
+<i class='bx bx-user'></i> Profile
+</li>
+
+<li onclick="window.location.href='faq.html'">
+<i class='bx bx-help-circle'></i> FAQ
+</li>
+
+<li class="active">
+<i class='bx bx-message-error'></i> Complaint
+</li>
+
+<li id="logoutBtn">
+<i class='bx bx-log-out'></i> Logout
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+<div class="top-bar">
+
+<h1>Submit Complaint</h1>
+
+</div>
+
+
+<div class="section">
+
+<label><b>Select Issue</b></label>
+
+<select id="issueType" onchange="fillComplaint()">
+
+<option value="">Select Issue</option>
+
+<option value="Course is not opening">
+Course is not opening
+</option>
+
+<option value="Video not playing">
+Video not playing
+</option>
+
+<option value="Payment issue">
+Payment issue
+</option>
+
+<option value="Certificate issue">
+Certificate issue
+</option>
+
+<option value="Account problem">
+Account problem
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
+
+<br><br>
+
+<label><b>Describe your problem</b></label>
+
+<textarea id="complaintText"
+rows="6"
+placeholder="Write your issue here..."></textarea>
+<br><br>
+
+<button onclick="sendComplaint()" class="submit-btn">
+Submit Complaint
+</button>
+
+<p id="statusMsg"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="js/complaint.js"></script>
+
+</body>
+</html>
