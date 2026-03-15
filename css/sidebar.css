@@ -1,0 +1,29 @@
+.sidebar{
+width:230px;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+padding:25px;
+}
+
+.logo{
+font-size:22px;
+margin-bottom:30px;
+font-weight:600;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.sidebar li:hover{
+background:rgba(255,255,255,0.2);
+}
